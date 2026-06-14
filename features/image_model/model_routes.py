@@ -4,18 +4,11 @@ import base64
 from fastapi import APIRouter, UploadFile, File, Query, HTTPException
 from fastapi.responses import JSONResponse
 
-try:
-    from .model import model
-    from .utils import (
-        detect_deepfake_best_localization,
-        generate_pdf_report,
-    )
-except ImportError:
-    from model import model
-    from utils import (
-        detect_deepfake_best_localization,
-        generate_pdf_report,
-    )
+from .model import model
+from .utils import (
+    detect_deepfake_best_localization,
+    generate_pdf_report,
+)
 
 router = APIRouter()
 
